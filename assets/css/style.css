@@ -1,19 +1,20 @@
 /* ==========================================================================
    hyoilsfa — Design Tokens
-   Marine(#123C5C) / Paper(#F6F5F1) / Brass(#B9852E) / Charcoal(#1E2528)
+   Marine Navy(#16214A) / Paper(#FFFFFF) / Teal(#14ABA6) / Charcoal(#17223B)
+   — SFA Group(sfagroup.com) 브랜드 톤에 맞춰 딥네이비 + 틸 액센트로 조정 —
    Verified Green(#2E6B52) / Line(#D8D3C7)
    ========================================================================== */
 
 :root {
-  --marine: #123c5c;
-  --marine-dark: #0b2b42;
-  --marine-tint: #eaf1f6;
-  --paper: #f6f5f1;
-  --paper-raised: #ffffff;
-  --brass: #b9852e;
-  --brass-dark: #93692655;
-  --charcoal: #1e2528;
-  --charcoal-soft: #4d565a;
+  --marine: #16214a;
+  --marine-dark: #0a1230;
+  --marine-tint: #eef1fa;
+  --paper: #ffffff;
+  --paper-raised: #f5f7fc;
+  --brass: #14aba6;
+  --brass-dark: #0f878355;
+  --charcoal: #17223b;
+  --charcoal-soft: #4a5578;
   --verified: #2e6b52;
   --verified-tint: #e7f2ed;
   --line: #d8d3c7;
