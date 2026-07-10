@@ -646,6 +646,10 @@ a { color: inherit; text-decoration: none; }
   align-items: stretch;
 }
 
+.why-sfa-layout > * {
+  min-width: 0;
+}
+
 .feature-list {
   display: flex;
   flex-direction: column;
