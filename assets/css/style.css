@@ -308,9 +308,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .eyebrow-teal {
-  color: #fff;
-  background: var(--brass);
-  border-color: var(--brass);
+  color: var(--verified);
+  background: #ffffff;
+  border-color: #ffffff;
 }
 
 .slide-content h2 {
