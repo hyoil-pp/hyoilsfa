@@ -9,7 +9,7 @@
 <meta property="og:description" content="배관 공사 없이 어디든 배수를 해결하는 프랑스 SFA 오배수 패키지 펌프. 정가 공개, 재고 즉시 확인.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/images/og/hyoilsfa-og.png">
-<link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
 
@@ -326,6 +326,30 @@
     </div>
 
     <div class="why-sfa-layout">
+      <div class="sfa-video-panel">
+        <div class="sfa-video-head">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="sfa-video-badge">
+              <span class="sfa-video-dot"></span>
+              PRODUCT DEMO
+            </span>
+            <span style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.75);">SFA 펌프 작동 영상</span>
+          </div>
+          <span style="font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;">실제 설치·작동 시연</span>
+        </div>
+        <div class="sfa-video-body">
+          <iframe
+            src="https://player.cloudinary.com/embed/?cloud_name=dlu9q6tbl&public_id=SFA_p9vysf&autoplay=true&muted=true&loop=true&controls=true"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="sfa-video-foot">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span>설치 공간에 제약 없이 오수·하수를 강제 배수 — 지하층, 지하 주차장, 욕실 등 다양한 현장에 적용 가능합니다.</span>
+        </div>
+      </div>
+
       <div class="feature-list">
         <div class="feature-card">
           <span class="feature-eyebrow">쉽고 빠른 설치</span>
@@ -351,30 +375,6 @@
           <span class="feature-eyebrow">디자인</span>
           <h3>인테리어와 조화</h3>
           <p class="feature-desc">설치 공간의 인테리어와 자연스럽게 어우러지는 디자인으로 설계되었습니다.</p>
-        </div>
-      </div>
-
-      <div class="sfa-video-panel">
-        <div class="sfa-video-head">
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span class="sfa-video-badge">
-              <span class="sfa-video-dot"></span>
-              PRODUCT DEMO
-            </span>
-            <span style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.75);">SFA 펌프 작동 영상</span>
-          </div>
-          <span style="font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;">실제 설치·작동 시연</span>
-        </div>
-        <div class="sfa-video-body">
-          <iframe
-            src="https://player.cloudinary.com/embed/?cloud_name=dlu9q6tbl&public_id=SFA_p9vysf&autoplay=true&muted=true&loop=true&controls=true"
-            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="sfa-video-foot">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-          <span>설치 공간에 제약 없이 오수·하수를 강제 배수 — 지하층, 지하 주차장, 욕실 등 다양한 현장에 적용 가능합니다.</span>
         </div>
       </div>
     </div>
@@ -621,9 +621,6 @@
   nextBtn.addEventListener('click', function () { track.scrollBy({ left: 280, behavior: 'smooth' }); });
 })();
 (function () {
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
   if (window.location.hash) {
     window.addEventListener('load', function () {
       setTimeout(function () {
