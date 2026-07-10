@@ -637,6 +637,72 @@ a { color: inherit; text-decoration: none; }
 }
 .timeline-arrow:hover { background: var(--marine-tint); }
 
+/* ---------- Why SFA layout (feature cards + video) ---------- */
+
+.why-sfa-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  cursor: default;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card .feature-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.feature-card h3 {
+  font-size: 15.5px;
+  margin: 0;
+  color: var(--charcoal);
+  transition: color 0.2s ease;
+}
+
+.feature-card .feature-desc {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255,255,255,0.92);
+  transition: max-height 0.25s ease, opacity 0.2s ease, margin-top 0.25s ease;
+}
+
+.feature-card:hover {
+  background: var(--brass);
+  border-color: var(--brass);
+}
+
+.feature-card:hover .feature-eyebrow { color: rgba(255,255,255,0.85); }
+.feature-card:hover h3 { color: #fff; }
+.feature-card:hover .feature-desc {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 8px;
+}
+
 /* ---------- SFA video panel (product demo) ---------- */
 
 .sfa-video-panel {
@@ -1199,6 +1265,7 @@ table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: 
   .about-grid { grid-template-columns: 1fr; }
   .badge-list { grid-template-columns: 1fr 1fr; }
   .res-grid { grid-template-columns: 1fr; }
+  .why-sfa-layout { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .main-nav { display: none; }
   .nav-toggle { display: inline-flex; }
