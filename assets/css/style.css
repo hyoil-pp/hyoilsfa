@@ -563,79 +563,80 @@ a { color: inherit; text-decoration: none; }
 
 .install-grid-wide .install-tile { padding: 18px 8px; }
 
-/* ---------- SFA history timeline ---------- */
+/* ---------- SFA history timeline (line + dots) ---------- */
 
-.timeline-wrap {
+.timeline-nodes {
+  display: flex;
+  gap: 0;
+  margin-top: 10px;
+}
+
+.timeline-node {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.node-marker {
+  position: relative;
+  width: 100%;
+  height: 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
-.timeline-track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 14px 4px 16px;
-  scrollbar-width: thin;
-}
-
-.timeline-item {
-  flex: 0 0 260px;
-  scroll-snap-align: start;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  position: relative;
-}
-
-.timeline-item::before {
+.node-marker::before,
+.node-marker::after {
   content: '';
   position: absolute;
-  top: -8px;
-  left: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--brass);
+  top: 50%;
+  height: 2px;
+  background: rgba(18, 33, 74, 0.18);
 }
 
-.timeline-year {
-  display: block;
+.node-marker::before { left: 0; right: 50%; }
+.node-marker::after { left: 50%; right: 0; }
+
+.timeline-node:first-child .node-marker::before { background: transparent; }
+.timeline-node:last-child .node-marker::after { background: transparent; }
+
+.node-dot {
+  position: relative;
+  z-index: 1;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--brass);
+  border: 3px solid var(--paper-raised);
+  box-shadow: 0 0 0 2px var(--brass);
+}
+
+.node-year {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--marine);
   margin-bottom: 8px;
 }
 
-.timeline-item h3 {
-  font-size: 15px;
-  margin: 0 0 8px;
+.timeline-node h3 {
+  font-size: 14px;
+  margin: 0 0 6px;
   color: var(--charcoal);
 }
 
-.timeline-item p {
-  font-size: 13px;
+.timeline-node p {
+  font-size: 12.5px;
+  line-height: 1.5;
   color: var(--charcoal-soft);
   margin: 0;
 }
-
-.timeline-arrow {
-  flex: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--marine);
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  transition: background 0.15s ease;
-}
-.timeline-arrow:hover { background: var(--marine-tint); }
 
 /* ---------- Why SFA layout (feature cards + video) ---------- */
 
@@ -1619,6 +1620,8 @@ table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: 
   .install-card-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-slider { height: auto; min-height: 480px; }
   .slide-arrow { width: 34px; height: 34px; font-size: 18px; }
+  .timeline-nodes { overflow-x: auto; padding-bottom: 8px; }
+  .timeline-node { flex: 0 0 170px; }
 }
 
 @media (max-width: 600px) {
