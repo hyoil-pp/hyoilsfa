@@ -1022,13 +1022,14 @@ section { padding: 64px 0; }
 .trust-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 32px;
   margin-top: 30px;
   flex-wrap: wrap;
 }
 
 .brand-block {
-  flex: 1;
+  flex: 0 1 auto;
   min-width: 260px;
 }
 
