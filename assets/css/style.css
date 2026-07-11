@@ -1624,6 +1624,19 @@ table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: 
   .timeline-node { flex: 0 0 170px; }
 }
 
+/* SFA 동영상(모바일): 헤더/푸터 숨기고 영상만 깔끔하게 — hyoilpump.co.kr에서 검증된 padding 트릭 */
+@media (max-width: 768px) {
+  .sfa-video-panel {
+    min-height: 0 !important;
+    height: 0 !important;
+    padding-bottom: 56.25%;
+    aspect-ratio: auto !important;
+    position: relative;
+  }
+  .sfa-video-head, .sfa-video-foot { display: none !important; }
+  .sfa-video-body { position: absolute !important; inset: 0; flex: none !important; }
+}
+
 @media (max-width: 600px) {
   .stats-grid { grid-template-columns: 1fr; }
   .stat-item { border-left: none; border-top: 1px solid rgba(18, 60, 92, 0.14); padding-top: 14px; }
