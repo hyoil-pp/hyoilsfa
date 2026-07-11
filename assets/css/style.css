@@ -1050,6 +1050,16 @@ section { padding: 64px 0; }
   margin-top: 14px;
 }
 
+.text-link-teal {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--brass);
+}
+
+.text-link-teal:hover { text-decoration: underline; }
+
 .brand-chip {
   font-size: 12.5px;
   font-weight: 600;
@@ -1571,10 +1581,10 @@ table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: 
   border-top: 1px solid rgba(255,255,255,0.14);
   padding-top: 18px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  gap: 6px;
   font-size: 12px;
+  line-height: 1.6;
   color: rgba(255,255,255,0.55);
 }
 
