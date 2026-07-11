@@ -1092,6 +1092,8 @@ section { padding: 64px 0; }
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
+  color: inherit;
+  text-decoration: none;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
 
@@ -1106,6 +1108,14 @@ section { padding: 64px 0; }
   justify-content: center;
   margin-bottom: 14px;
   border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14px;
 }
 
 .product-card h3 {
