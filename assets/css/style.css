@@ -1019,21 +1019,34 @@ section { padding: 64px 0; }
 
 .stats-note b { color: var(--danger); }
 
+.trust-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.brand-block {
+  flex: 1;
+  min-width: 260px;
+}
+
 .brand-line {
-  text-align: center;
+  text-align: left;
   font-size: 14px;
   font-weight: 600;
   color: var(--marine);
-  margin-top: 24px;
+  margin-top: 0;
 }
 
 .brand-rail {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
 .brand-chip {
@@ -1234,13 +1247,11 @@ table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: 
 .company-banner {
   display: flex;
   align-items: center;
-  gap: 28px;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 auto;
+  gap: 20px;
+  flex-shrink: 0;
   background: #07447c;
   border-radius: var(--radius-lg);
-  padding: 24px 44px 24px 24px;
+  padding: 16px 28px 16px 16px;
   box-shadow: var(--shadow-card);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -1251,7 +1262,7 @@ table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: 
 }
 
 .company-banner img {
-  height: 64px;
+  height: 48px;
   width: auto;
   display: block;
   flex-shrink: 0;
@@ -1448,7 +1459,9 @@ table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: 
   .install-grid { grid-template-columns: repeat(3, 1fr); }
   .install-grid-wide { grid-template-columns: repeat(2, 1fr); }
   .install-card-grid { grid-template-columns: 1fr; }
-  .company-banner { flex-direction: column; text-align: center; padding: 28px 24px; }
+  .company-banner { flex-direction: column; text-align: center; padding: 24px; }
+  .trust-row { flex-direction: column; align-items: stretch; }
+  .brand-line, .brand-rail { text-align: center; justify-content: center; }
   .product-grid { grid-template-columns: 1fr; }
   .badge-list { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
